@@ -98,6 +98,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="stockCurrentPriceLabelView" destination="ytp-nv-pvX" id="r8H-FP-l9C"/>
+                <outlet property="stockNameLabelView" destination="FfU-mO-7ol" id="FGm-eS-Lke"/>
+                <outlet property="stockQuantityLabelView" destination="Oav-TQ-2HJ" id="n5Y-yd-ABa"/>
+                <outlet property="stockTickerLabelView" destination="eHz-zg-3FK" id="0Ot-hg-mfL"/>
+                <outlet property="stockTotalAmountLabelView" destination="TZE-iR-irB" id="Dfw-gb-E7K"/>
+            </connections>
             <point key="canvasLocation" x="145.80152671755724" y="24.647887323943664"/>
         </tableViewCell>
         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" id="MbP-bn-juL" userLabel="Left Stack View">
