@@ -17,11 +17,14 @@ class StockViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setupStocksTableView()
     }
     
     func setupStocksTableView() {
         stocksTableView.register(StockTableViewCell.nib(), forCellReuseIdentifier: StockTableViewCell.cellIdentifer)
         stocksTableView.dataSource = self
+        
+        viewModel.addMockStockItem()
     }
     
 }

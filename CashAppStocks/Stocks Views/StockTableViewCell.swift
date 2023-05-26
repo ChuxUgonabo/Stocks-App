@@ -36,12 +36,14 @@ class StockTableViewCell: UITableViewCell {
     func configure(stock: Stock) {
         stockTickerLabelView.text = stock.ticker
         stockNameLabelView.text = stock.name
-        stockQuantityLabelView.text = "\(stock.quantity)"
-        stockCurrentPriceLabelView.text = "@ \(stock.currentPriceCents)"
+        stockQuantityLabelView.text = "\(Int(stock.quantity ?? 0))"
         
-        var currentPrice = stock.currentPriceCents / 100
-        var totalAmount = (stock.quantity ?? 0) * currentPrice
-        
-        stockTotalAmountLabelView.text = "\(totalAmount)"
+        var currentPrice = Double(stock.currentPriceCents) / 100
+        let formattedCurrentPrice = String(format: "\(stock.currency) %.2f", currentPrice)
+        stockCurrentPriceLabelView.text = "@ \(formattedCurrentPrice)"
+
+        var totalAmount = Double(stock.quantity ?? 0) * currentPrice
+        let formattedTotalAmount = String(format: "\(stock.currency) %.2f", totalAmount)
+        stockTotalAmountLabelView.text = "\(formattedTotalAmount)"
     }
 }
