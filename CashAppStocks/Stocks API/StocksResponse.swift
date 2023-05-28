@@ -8,7 +8,8 @@
 import Foundation
 
 struct StockList: Codable {
-    struct Stock: Codable{
+    
+    struct StockResponse: Codable{
         let ticker : String
         let name: String
         let currency: String
@@ -16,5 +17,6 @@ struct StockList: Codable {
         let quantity: Int?
         let current_price_timestamp: Int
     }
-    let stocks: [Stock]
+    
+    let stocks: [StockResponse]
 }
