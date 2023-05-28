@@ -16,7 +16,6 @@ class StockViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         setupStocksTableView()
     }
     
@@ -24,7 +23,7 @@ class StockViewController: UIViewController {
         stocksTableView.register(StockTableViewCell.nib(), forCellReuseIdentifier: StockTableViewCell.cellIdentifer)
         stocksTableView.dataSource = self
         
-        viewModel.addMockStockItem()
+        viewModel.loadStocks()
     }
     
 }

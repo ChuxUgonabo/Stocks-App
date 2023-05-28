@@ -11,18 +11,23 @@ class StockListViewModel {
     
     var stockList = [Stock]()
     
+    let stockAPIClient = StockAPIClient()
     
-    func addMockStockItem() {
-        var stockItem1 = Stock(ticker: "TTT", name: "test one 1 INC.", currency: "USD", currentPriceCents: 886783, quantity: 5, currentPriceTimestamp: 665656565656)
-        var stockItem2 = Stock(ticker: "2TTT", name: "test two 2 INC.", currency: "USD", currentPriceCents: 886783, quantity: 15, currentPriceTimestamp: 665656565656)
-        var stockItem3 = Stock(ticker: "3TTT", name: "test three 3 INC.", currency: "USD", currentPriceCents: 886783, quantity: nil, currentPriceTimestamp: 665656565656)
+    func loadStocks() {
         
-        stockList.append(stockItem1)
-        stockList.append(stockItem2)
-        stockList.append(stockItem3)
+        stockAPIClient.getStocks { result in
+            
+            switch result {
+            case .success(let stocks):
+                self.stockList = stocks.stocks.map({ stockResponse in
+                    Stock(stockResponse: stockResponse)
+                })
+                
+            case .failure(let error):
+                print("Error fetching stocks: \(error)")
+            }
+        }
     }
-    
-    
     func numberOfRowsInSection(_ section: Int) -> Int {
         return stockList.count
     }

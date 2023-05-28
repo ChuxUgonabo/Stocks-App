@@ -17,20 +17,8 @@ class StockTableViewCell: UITableViewCell {
     
     static let cellIdentifer = "StockTableViewCell"
 
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
     static func nib() ->  UINib {
         return UINib(nibName: cellIdentifer, bundle: nil)
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func configure(stock: Stock) {
@@ -38,11 +26,11 @@ class StockTableViewCell: UITableViewCell {
         stockNameLabelView.text = stock.name
         stockQuantityLabelView.text = "\(Int(stock.quantity ?? 0))"
         
-        var currentPrice = Double(stock.currentPriceCents) / 100
+        let currentPrice = Double(stock.currentPriceCents) / 100
         let formattedCurrentPrice = String(format: "\(stock.currency) %.2f", currentPrice)
         stockCurrentPriceLabelView.text = "@ \(formattedCurrentPrice)"
 
-        var totalAmount = Double(stock.quantity ?? 0) * currentPrice
+        let totalAmount = Double(stock.quantity ?? 0) * currentPrice
         let formattedTotalAmount = String(format: "\(stock.currency) %.2f", totalAmount)
         stockTotalAmountLabelView.text = "\(formattedTotalAmount)"
     }

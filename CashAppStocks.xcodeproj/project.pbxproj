@@ -16,13 +16,13 @@
 		846E52822A1DE94100201F03 /* CashAppStocksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E52812A1DE94100201F03 /* CashAppStocksTests.swift */; };
 		846E528C2A1DE94100201F03 /* CashAppStocksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E528B2A1DE94100201F03 /* CashAppStocksUITests.swift */; };
 		846E528E2A1DE94100201F03 /* CashAppStocksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E528D2A1DE94100201F03 /* CashAppStocksUITestsLaunchTests.swift */; };
-		846E529C2A1ED09A00201F03 /* MockStockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E529B2A1ED09900201F03 /* MockStockAPIClient.swift */; };
 		846E529F2A1FD2AA00201F03 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E529E2A1FD2AA00201F03 /* Stock.swift */; };
 		846E52A22A1FD59000201F03 /* StocksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E52A12A1FD59000201F03 /* StocksResponse.swift */; };
 		846E52A52A1FDD0700201F03 /* StocksAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E52A42A1FDD0700201F03 /* StocksAPIService.swift */; };
 		846E52A82A1FDDD100201F03 /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E52A62A1FDDD100201F03 /* StockTableViewCell.swift */; };
 		846E52A92A1FDDD100201F03 /* StockTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846E52A72A1FDDD100201F03 /* StockTableViewCell.xib */; };
 		84DA73B62A20092E00CC09AF /* StockListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA73B52A20092E00CC09AF /* StockListViewModel.swift */; };
+		84DA73B72A2137E800CC09AF /* MockStockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E529B2A1ED09900201F03 /* MockStockAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,7 +128,6 @@
 		846E52802A1DE94100201F03 /* CashAppStocksTests */ = {
 			isa = PBXGroup;
 			children = (
-				846E529A2A1ED06C00201F03 /* Helper */,
 				846E52812A1DE94100201F03 /* CashAppStocksTests.swift */,
 			);
 			path = CashAppStocksTests;
@@ -141,14 +140,6 @@
 				846E528D2A1DE94100201F03 /* CashAppStocksUITestsLaunchTests.swift */,
 			);
 			path = CashAppStocksUITests;
-			sourceTree = "<group>";
-		};
-		846E529A2A1ED06C00201F03 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				846E529B2A1ED09900201F03 /* MockStockAPIClient.swift */,
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 		846E529D2A1FD26E00201F03 /* Stocks Model */ = {
@@ -164,6 +155,7 @@
 			children = (
 				846E52A12A1FD59000201F03 /* StocksResponse.swift */,
 				846E52A42A1FDD0700201F03 /* StocksAPIService.swift */,
+				846E529B2A1ED09900201F03 /* MockStockAPIClient.swift */,
 			);
 			path = "Stocks API";
 			sourceTree = "<group>";
@@ -318,6 +310,7 @@
 				846E526B2A1DE93A00201F03 /* AppDelegate.swift in Sources */,
 				846E529F2A1FD2AA00201F03 /* Stock.swift in Sources */,
 				846E526D2A1DE93A00201F03 /* SceneDelegate.swift in Sources */,
+				84DA73B72A2137E800CC09AF /* MockStockAPIClient.swift in Sources */,
 				846E52A52A1FDD0700201F03 /* StocksAPIService.swift in Sources */,
 				84DA73B62A20092E00CC09AF /* StockListViewModel.swift in Sources */,
 			);
@@ -327,7 +320,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846E529C2A1ED09A00201F03 /* MockStockAPIClient.swift in Sources */,
 				846E52822A1DE94100201F03 /* CashAppStocksTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
