@@ -17,13 +17,18 @@ class StockViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupStocksTableView()
+        loadTableView()
     }
     
     func setupStocksTableView() {
         stocksTableView.register(StockTableViewCell.nib(), forCellReuseIdentifier: StockTableViewCell.cellIdentifer)
         stocksTableView.dataSource = self
-        
-        viewModel.loadStocks()
+    }
+    
+    func loadTableView() {
+        viewModel.loadStocks { [weak self] in
+            self?.stocksTableView.reloadData()
+        }
     }
     
 }

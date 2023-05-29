@@ -21,7 +21,7 @@ This is a simple App that displays a Table view with the list of stocks that wer
     
 ## Code Structure / Architecture 
 
-I followed MVVM pattern for this project, below are the following components:
+I followed MVVM pattern for this project, below are the components:
 - Model: Represents the data structure of a stock item. 
     - Stocks Model 
     - StockList (Model of the Stocks API)
@@ -47,3 +47,6 @@ The tests for this resides in one file "CashAppStocksTests". The application inc
 ### Test Helpers
 - MockStockAPIClient: Used to create a Mock StockAPIClient to test the scenerios list above
 - MockStocksViewModel: communicates between the Stock Model and the APIClient
+
+## Additional Information
+- I maintained a commit log for code updates and a maintenance log to keep track of code updates and a history of modifications. 

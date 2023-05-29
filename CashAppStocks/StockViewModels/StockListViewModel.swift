@@ -12,7 +12,7 @@ class StockListViewModel {
     var stockList = [Stock]()
     let stockAPIClient = StockAPIClient()
     
-    func loadStocks() {
+    func loadStocks(completion: @escaping () -> Void) {
         
         stockAPIClient.getStocks { result in
             
@@ -21,9 +21,11 @@ class StockListViewModel {
                 self.stockList = stocks.stocks.map({ stockResponse in
                     Stock(stockResponse: stockResponse)
                 })
-                
             case .failure(let error):
                 print("Error fetching stocks: \(error)")
+            }
+            DispatchQueue.main.async {
+                completion()
             }
         }
     }
