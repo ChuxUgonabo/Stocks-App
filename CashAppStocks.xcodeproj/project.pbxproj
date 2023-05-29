@@ -118,12 +118,12 @@
 			isa = PBXGroup;
 			children = (
 				846E529D2A1FD26E00201F03 /* Stocks Model */,
-				846E526A2A1DE93A00201F03 /* AppDelegate.swift */,
-				846E526C2A1DE93A00201F03 /* SceneDelegate.swift */,
 				846E52A02A1FD52A00201F03 /* Stocks API Service */,
 				846E52A32A1FDB5800201F03 /* Stocks Views */,
 				84DA73BB2A24537F00CC09AF /* StockViewModels */,
 				846E52752A1DE94000201F03 /* LaunchScreen.storyboard */,
+				846E526A2A1DE93A00201F03 /* AppDelegate.swift */,
+				846E526C2A1DE93A00201F03 /* SceneDelegate.swift */,
 				846E52732A1DE94000201F03 /* Assets.xcassets */,
 				846E52782A1DE94000201F03 /* Info.plist */,
 			);

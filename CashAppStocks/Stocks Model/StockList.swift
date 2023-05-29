@@ -7,9 +7,10 @@
 
 import Foundation
 
+// Model for the Stocks API
 struct StockList: Codable {
     
-    struct StockResponse: Codable{
+    struct StockResponse: Codable {
         let ticker : String
         let name: String
         let currency: String
