@@ -10,7 +10,6 @@ import Foundation
 class StockListViewModel {
     
     var stockList = [Stock]()
-    
     let stockAPIClient = StockAPIClient()
     
     func loadStocks() {
