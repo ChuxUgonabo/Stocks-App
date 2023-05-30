@@ -104,7 +104,7 @@ final class CashAppStocksTests: XCTestCase {
     
     //testNetworkFailure or other erors
     func testNetworkFailure() {
-        let sut = makeSUT(testScenario: MockStockAPIClient.TestScenario.networkFailure)
+        let sut = makeSUT(testScenario: MockStockAPIClient.TestScenario.failure)
         let expectation = XCTestExpectation(description: "Network Failor error")
         
         sut.fetchStocks { result in

@@ -13,7 +13,7 @@ class MockStockAPIClient: APIClient {
         case valid
         case invalid
         case empty
-        case networkFailure
+        case failure
     }
     
     private let testScenario: TestScenario
@@ -29,7 +29,7 @@ class MockStockAPIClient: APIClient {
         
         switch testScenario {
             
-        case TestScenario.valid:
+        case .valid:
             // Valid response
             stubResponse = """
                {
@@ -44,7 +44,7 @@ class MockStockAPIClient: APIClient {
            }
            """
             
-        case TestScenario.empty:
+        case .empty:
             // Empty response
             stubResponse = """
                {
@@ -52,7 +52,7 @@ class MockStockAPIClient: APIClient {
                }
            """
             
-        case TestScenario.invalid:
+        case .invalid:
             // Invalid response
             stubResponse = """
                {
@@ -66,7 +66,7 @@ class MockStockAPIClient: APIClient {
                ]
            }malformedmalformedmalformed
            """
-        case .networkFailure:
+        case .failure:
             completion(.failure(error))
             return
         }
