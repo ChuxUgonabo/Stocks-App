@@ -42,7 +42,7 @@ The tests for this resides in one file "CashAppStocksTests". The application inc
 - Valid: Test the successful retrieval and parsing of the stock data.
 - Empty: Test when the API returns an empty response.
 - Invalid: Test when the API returns a corrupted response.
-- networkFailure: other errors that may occur
+- failure: other errors that may occur
 
 ### Test Helpers
 - MockStockAPIClient: Used to create a Mock StockAPIClient to test the scenerios list above
